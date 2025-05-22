@@ -5,5 +5,5 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(),tailwindcss()],
-  base:'/mealdb-react-router-practice-project-18'
+  base:'/mealdb-router-18'
 })

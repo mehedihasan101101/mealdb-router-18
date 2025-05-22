@@ -8,10 +8,12 @@ export default function Nav() {
             setHasShadow(window.scrollY > 10)
         }
         window.addEventListener('scroll', controlNav)
+
+        return () => window.removeEventListener('scroll', controlNav);
     }, [])
     return (
         <>
-            <div className={`navbar lg:h-23 bg-base-100 ${hasShadow ? "shadow" : ""}`}>
+            <div className={`navbar sticky top-0 z-50  lg:h-23 bg-base-100 ${hasShadow ? "shadow" : ""}`}>
                 <div className="flex container mx-auto items-center">
                     <div className="flex-1 flex items-center">
                         <div className="dropdown">
@@ -21,8 +23,8 @@ export default function Nav() {
                             <ul
                                 tabIndex={0}
                                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                                <li><NavLink>Home</NavLink></li>
-                                <li><NavLink>About Us</NavLink></li>
+                                <li><NavLink to={"/mealdb-router-18"}>Home</NavLink></li>
+                                <li><NavLink to={"about"}>AboutUs</NavLink></li>
                                 <li><NavLink>News</NavLink></li>
                                 <li><NavLink>Schedules</NavLink></li>
                             </ul>
@@ -31,20 +33,13 @@ export default function Nav() {
                     </div>
                     <div className=" hidden lg:flex">
                         <ul className="menu menu-horizontal px-1 text-[#5a5a5a] text-[16px] gap-8">
-                            <li><NavLink to={"/"}>Home</NavLink></li>
-                            <li><NavLink to={"/about"}>AboutUs</NavLink></li>
+                            <li><NavLink to={"/mealdb-router-18"}>Home</NavLink></li>
+                            <li><NavLink to={"about"}>AboutUs</NavLink></li>
                             <li><NavLink>News</NavLink></li>
                             <li><NavLink>Schedules</NavLink></li>
                         </ul>
                     </div>
-                    <div className="px-3 py-2 rounded shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
-                        <div className=''>
-                            <p className='font-bold flex items-center gap-2'>
-                                Coin
-                                <img className='w-[22px]' alt="" />
-                            </p>
-                        </div>
-                    </div>
+                    <button className="btn  bg-[#ff9000]">Book Now</button>
                 </div>
 
             </div>

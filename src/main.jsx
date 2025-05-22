@@ -4,15 +4,13 @@ import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from "react-router";
 
-import About from './components/About.jsx';
 const router = createBrowserRouter([
   {
     path: '/mealdb-router-18',
     element: <App></App>,
     children: [
       {
-        path: "about",
-        element: <About></About>
+
       }
     ]
   }

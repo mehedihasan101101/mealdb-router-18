@@ -1,7 +1,7 @@
 import bannerImage from '../assets/bannerImage.png'
 const Header = () => {
     return (
-        <div className="hero bg-base-200 py-30">
+        <div className="hero bg-base-200 md:py-30 py-20">
             <div className=" flex flex-col justify-between container p-6 items-center lg:flex-row-reverse">
                 <img
                     src={bannerImage}
@@ -13,8 +13,6 @@ const Header = () => {
                         Our dishes blend timeless recipes with bold, modern flavors—crafted from fresh ingredients and creative passion. 
                         Whether you're grabbing a bite or settling in with friends, enjoy a relaxed atmosphere, stylish decor, and food that
                          brings people together.
-
-
                     </p>
                     <button className="btn bg-[#ff9000]">Book Now</button>
                 </div>

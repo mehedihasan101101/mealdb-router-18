@@ -11,6 +11,7 @@ function App() {
     <>
       <NavMenu></NavMenu>
       <Header></Header>
+      <h1 className='text-center text-5xl mt-8 font-bold'>Categories</h1>
       <Outlet>
 
       </Outlet>

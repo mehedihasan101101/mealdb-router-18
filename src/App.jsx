@@ -3,6 +3,7 @@ import { Outlet } from 'react-router'
 import NavMenu from './components/NavMenu'
 import './App.css'
 import Header from './components/Header'
+import Category from './components/Category'
 
 function App() {
 
@@ -11,7 +12,8 @@ function App() {
     <>
       <NavMenu></NavMenu>
       <Header></Header>
-      <h1 className='text-center text-5xl mt-8 font-bold'>Categories</h1>
+      <Category></Category>
+      
       <Outlet>
 
       </Outlet>

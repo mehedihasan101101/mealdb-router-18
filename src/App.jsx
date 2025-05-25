@@ -4,6 +4,7 @@ import NavMenu from './components/NavMenu'
 import './App.css'
 import Header from './components/Header'
 import Category from './components/Category'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <Outlet>
 
       </Outlet>
+      <Footer></Footer>
     </>
   )
 }

@@ -3,7 +3,6 @@ import ItemCard from "./ItemCard";
 
 const Starter = () => {
     const { meals } = useLoaderData();
-    console.log(meals)
     return (
         <>
             <div className=" container mt-5 m-auto grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4">

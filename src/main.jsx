@@ -3,47 +3,32 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, Navigate, RouterProvider } from "react-router";
+import SingleItemPage from './components/category/singleItemPage.jsx';
 import Starter from './components/category/Starter.jsx';
-import Seafood from './components/category/Seafood.jsx';
-import Vegetarian from './components/category/Vegetarian.jsx';
-import Side from './components/category/Side.jsx';
-import Pasta from './components/category/Pasta.jsx';
-import Dessert from './components/category/Dessert.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/mealdb-router-18',
     element: <App></App>,
     children: [
+      // default child 
       {
         index: true,
         element: <Navigate to="starter" replace />
       },
+      // all child pages
       {
 
-        path: "starter",
-        loader: () => fetch("https://www.themealdb.com/api/json/v1/1/filter.php?c=starter"),
+        path: ":categoryname",
+        loader: ({ params }) => fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${params.categoryname}`),
         element: <Starter></Starter>
       },
+   
+      // single item page
       {
-        path: "seafood",
-        element: <Seafood></Seafood>
-      },
-      {
-        path: "vegetarian",
-        element: <Vegetarian></Vegetarian>
-      },
-      {
-        path: "side",
-        element: <Side></Side>
-      },
-      {
-        path: "pasta",
-        element: <Pasta></Pasta>
-      },
-      {
-        path: "dessert",
-        element: <Dessert></Dessert>
+        path: ":categoryname/:itemId",
+        loader: ({ params }) => fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.itemId}`),
+        element: <SingleItemPage></SingleItemPage>
       }
     ]
   }

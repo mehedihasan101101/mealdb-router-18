@@ -14,15 +14,15 @@ const router = createBrowserRouter([
     path: '/mealdb-router-18',
     element: <App></App>,
     children: [
-
+      {
+        index: true,
+        element: <Navigate to="starter" replace />
+      },
       {
         path: "",
         element: <Home></Home>,
         children: [
-          {
-            index: true,
-            element: <Navigate to="starter" replace />
-          },
+
           // all child pages
           {
             path: ":categoryname",

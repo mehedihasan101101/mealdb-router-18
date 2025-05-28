@@ -11,7 +11,7 @@ const ItemCard = ({ meal }) => {
             <h1 className='font-bold text-xl '>{meal.strMeal}</h1>
             <p className='text-gray-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam temporibus laudantium tempora nesciunt!</p>
 
-            <button className="btn  bg-[#ff9000] "> <Link to={meal.idMeal}>Choose</Link> </button>
+            <button className="btn  bg-[#ff9000] "> <Link to={meal.idMeal}>Learn More</Link> </button>
         </div>
 
     );

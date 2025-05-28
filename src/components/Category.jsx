@@ -10,7 +10,7 @@ import { NavLink } from 'react-router';
 
 const Category = () => {
     return (
-        <div className=' container m-auto space-y-5'>
+        <div className=' container m-auto space-y-5' id="AllCategory">
             <h1 className='text-center text-5xl mt-8 font-bold'>Categories</h1>
             <div className='grid md:grid-cols-6 grid-cols-3 items-center justify-between'>
 

@@ -10,11 +10,12 @@ const Header = () => {
                 <div className='flex flex-col items-center lg:items-start'>
                     <h1 className="text-5xl font-bold text-center">Bold Flavors. Fresh Vibes</h1>
                     <p className="py-6 text-center lg:text-start max-w-[800px]">
-                        Our dishes blend timeless recipes with bold, modern flavors—crafted from fresh ingredients and creative passion. 
-                        Whether you're grabbing a bite or settling in with friends, enjoy a relaxed atmosphere, stylish decor, and food that
-                         brings people together.
+                        Welcome to your ultimate food discovery guide. Dive into the world of restaurant dishes — 
+                        learn their origin, explore how they’re made, and understand the stories behind every bite. 
+                        Whether you're a foodie, a home cook, or just curious, our platform brings you detailed descriptions,
+                         cooking insights, and rich cultural backgrounds of popular dishes from around the world.
                     </p>
-                    <button className="btn bg-[#ff9000]">Book Now</button>
+                    <button className="btn bg-[#ff9000]"><a href="#AllCategory">Read Now</a></button>
                 </div>
             </div>
         </div>

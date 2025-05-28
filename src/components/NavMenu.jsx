@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import logo from '../assets/logo.png'
 import { useEffect, useState } from 'react'
 export default function Nav() {
@@ -37,7 +37,7 @@ export default function Nav() {
                             <li><NavLink>Schedules</NavLink></li>
                         </ul>
                     </div>
-                    <button className="btn  bg-[#ff9000]">Book Now</button>
+                    <button className="btn  bg-[#ff9000]"> <a href="#AllCategory">Read Now</a> </button>
                 </div>
 
             </div>
